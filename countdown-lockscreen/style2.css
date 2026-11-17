@@ -1,0 +1,117 @@
+/* 1. Global Reset & Dark Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Main Lock Screen Card */
+.lock-screen-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 450px;
+    width: 90%;
+}
+
+/* 3. Header Styling */
+.lock-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.target-date {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* 4. Countdown Timer Grid */
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.time-box {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    flex: 1;
+    padding: 15px 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.time-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* 5. Unlock Input & Button Section */
+.unlock-section {
+    display: flex;
+    gap: 10px;
+}
+
+#passcode-input {
+    flex: 1;
+    padding: 12px 15px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#passcode-input:focus {
+    border-color: #38bdf8;
+}
+
+#unlock-btn {
+    padding: 12px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+#unlock-btn:hover {
+    background: #0ea5e9;
+}
+
+#unlock-btn:active {
+    transform: scale(0.97);
+}
