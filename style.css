@@ -1,0 +1,210 @@
+/* Import a clean modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* CSS Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Fullscreen Background with a sleek gradient */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Main Lock Screen Container */
+.lockscreen-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    
+    /* Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 1. Time & Date Section */
+.time-date-section h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #f8fafc;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.time-date-section p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* 2. Countdown Section */
+.countdown-section h2 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 12px 14px;
+    border-radius: 14px;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box span:not(.label) {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #38bdf8; /* Vibrant cyan accent */
+}
+
+.time-box .label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* 3. Motivational Quote */
+.quote-section p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #d7e1ea;
+    max-width: 380px;
+    line-height: 1.5;
+}
+
+/* 4. Unlock Button */
+.unlock-section {
+    width: 100%;
+}
+
+#unlock-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+#unlock-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+}
+
+#unlock-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   DAY 5: Unlock State & Mobile Responsiveness
+   ========================================== */
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Home Screen View Style */
+#home-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#home-screen h2 {
+    font-size: 2rem;
+    color: #38bdf8;
+}
+
+#home-screen p {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+#lock-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#lock-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ==========================================
+   MEDIA QUERIES (Mobile Optimization)
+   ========================================== */
+@media (max-width: 480px) {
+    .lockscreen-container {
+        padding: 25px 20px;
+        max-width: 90%;
+        gap: 25px;
+    }
+
+    .time-date-section h1 {
+        font-size: 3.5rem; /* Scale down clock on mobile phones */
+    }
+
+    .time-box {
+        min-width: 55px;
+        padding: 8px 10px;
+    }
+
+    .time-box span:not(.label) {
+        font-size: 1.4rem;
+    }
+}
