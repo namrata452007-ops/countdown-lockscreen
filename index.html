@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Lock Screen</title>
+    <!-- Link to our future CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="lockscreen-container">
+        
+        <!-- 1. Current Clock & Date Display -->
+        <div class="time-date-section">
+            <h1 id="current-time">12:00</h1>
+            <p id="current-date">Monday, November 16</p>
+        </div>
+
+        <!-- 2. Countdown Timer Section -->
+        <div class="countdown-section">
+            <h2>Countdown to Goal</h2>
+            <div class="countdown-timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Motivational Quote Section -->
+        <div class="quote-section">
+            <p id="quote">"The secret of getting ahead is getting started."</p>
+        </div>
+
+        <!-- 4. Unlock Interaction Area -->
+        <div class="unlock-section">
+            <button id="unlock-btn">Click to Unlock Screen</button>
+        </div>
+
+        <!-- 5. Hidden Home Screen (Revealed on Unlock) -->
+        <div id="home-screen" class="hidden">
+            <h2>Welcome Back, Developer! 🚀</h2>
+            <p>Your workspace is unlocked. Ready to build something amazing today?</p>
+            <button id="lock-btn">Lock Screen Again</button>
+        </div>
+
+        
+
+    </div>
+    </div>
+
+    
+
+    <!-- Link to our future JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
